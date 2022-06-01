@@ -16,6 +16,8 @@ Two options for creating an experiment directory:
 
 In a cmd cell:
 
+![alt text](CreateExperiment.PNG)
+
 Enter the following code:
 
 mlflow_create_experiment(name,
