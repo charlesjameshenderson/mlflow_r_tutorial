@@ -29,13 +29,16 @@ mlflow_create_experiment(name,
 
 In the tab bar:
 
-Creating an experiment only need to occur once.
+Create an experiment only once.
 
 To log runs the exeripment must be set each time.
 
 
 ## Set Experiment
 
+Run this prior to starting an mlflow run.
+
+![alt text](SetExperiment.PNG)
 
 
 ## Changes test
