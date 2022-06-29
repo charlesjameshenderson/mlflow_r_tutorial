@@ -29,8 +29,13 @@ mlflow_create_experiment(name,
 
 In the tab bar:
 
+Creating an experiment only need to occur once.
+
+To log runs the exeripment must be set each time.
 
 
 ## Set Experiment
+
+
 
 ## Changes test
