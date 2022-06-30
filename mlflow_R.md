@@ -41,4 +41,23 @@ Run this prior to starting an mlflow run.
 ![alt text](SetExperiment.PNG)
 
 
-## Changes test
+## MLFLOW
+
+Begin Training¶
+
+After setting the experiment, you can begin training. Depending on the type of model you are developing the requirements and architecture for the model will be different. However, there are some key mlflow commands we recommend looking into prior to the beginning of the training.
+
+with(mlflow_start_run() is a useful commands when it comes to launching runs and logging metrics. Please see the MLFlow documentation for details on specific tracking functions. https://www.mlflow.org/docs/latest/R-api.html
+
+Use the template below for starting and tracking a model.
+
+![alt text](SetExperiment.PNG)
+
+Once the training begins, the user will be able to follow along with the model’s progress by clicking into the Experiment tab this will take the user to another interface where you will be able to view various metrics and the model that gets saved from the run.
+
+
+
+The screenshot below shows an example where we train a NER model, we have turned on reporting to mlflow. Once the trainer.train() is called the MLFlow run will launch in the previously set experiment context and the user will be able to click into the experiment tab on the right.
+
+Crate::Carrier Documentation
+https://www.rdocumentation.org/packages/carrier/versions/0.1.0
