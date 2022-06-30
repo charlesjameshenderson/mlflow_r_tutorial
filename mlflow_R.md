@@ -112,11 +112,13 @@ Once you have determined your "best" model run it is important to register that 
 ![alt text](NameModelRepo.PNG)
 
 
+![alt text](ModelLanding.PNG)
+
+
 ![alt text](SelectRun.PNG)
 
 
 ![alt text](RegisterRun.PNG)
 
-![alt text](ModelLanding.PNG)
 
 
