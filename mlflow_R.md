@@ -129,3 +129,7 @@ Once you have determined your "best" model run it is important to register that 
 
 ![alt text](ModelStage.PNG)
 
+
+![alt text](Transition.PNG)
+
+
