@@ -51,7 +51,40 @@ with(mlflow_start_run() is a useful commands when it comes to launching runs and
 
 Use the template below for starting and tracking a model.
 
-![alt text](SetExperiment.PNG)
+![alt text](start_mlflow.PNG)
+
+        with(mlflow_start_run(), {
+  
+          model <- ModelType(y ~ x1 + x2, data = train_x)
+          test$predictions <- predict(model, test)
+  
+          preds <- as.numeric(test$predictions)
+          real <- as.numeric(test$y)
+
+          mae <- mean(as.numeric(abs(test$predictions - test$y)), na.rm = TRUE)
+          rmse <- sqrt(mean(as.numeric((test$predictions - test$y)), na.rm = TRUE))
+          r2 <- cor(preds, real, use = "complete.obs") ^ 2
+
+          message(" RMSE: ", rmse)
+          message(" MAE: ", mae)
+          message(" R2: ", r2)
+
+          mlflow_log_metric("rmse", rmse)
+          mlflow_log_metric("mae", mae)
+          mlflow_log_metric("r2", r2)
+
+          predictor <- carrier::crate(~ ModelLibrary::predict.ModelType(!!model, .x), !!model)
+          mlflow_log_model(predictor, artifact_path="Model Title") 
+
+
+        })
+          }
+
+For any questions about carrier::crate or uncommenting with "!!" please reference the following link:
+
+**Crate::Carrier Documentation**
+https://www.rdocumentation.org/packages/carrier/versions/0.1.0
+
 
 Once the training begins, the user will be able to follow along with the modelâ€™s progress by clicking into the Experiment tab this will take the user to another interface where you will be able to view various metrics and the model that gets saved from the run.
 
@@ -59,5 +92,4 @@ Once the training begins, the user will be able to follow along with the modelâ€
 
 The screenshot below shows an example where we train a NER model, we have turned on reporting to mlflow. Once the trainer.train() is called the MLFlow run will launch in the previously set experiment context and the user will be able to click into the experiment tab on the right.
 
-Crate::Carrier Documentation
-https://www.rdocumentation.org/packages/carrier/versions/0.1.0
+
