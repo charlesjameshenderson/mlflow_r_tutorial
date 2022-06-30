@@ -106,4 +106,10 @@ If no metrics are appearing in your experiment results or if you get an error me
 
 Once you have determined your "best" model run it is important to register that model. The advantage of registering a model is it creates transparency for determining models in staging and production. Additionally, through registering a model it allows for rapid changes and deploying of updated and refined models without having to alter code written for prediction notebooks. 
 
+![alt text](SelectRun.PNG)
+
+
+![alt text](RegisterRun.PNG)
+
+
 
