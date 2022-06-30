@@ -90,6 +90,8 @@ Once the training begins, the user will be able to follow along with the modelâ€
 
 ![alt text](ExperimentTab.PNG)
 
+![alt text](Experiments.PNG)
+
 
 # Registering the Model
 
