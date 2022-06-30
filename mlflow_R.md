@@ -92,6 +92,15 @@ Once the training begins, the user will be able to follow along with the modelâ€
 
 ![alt text](Experiments.PNG)
 
+# Experiment Troubleshoot
+
+If no metrics are appearing in your experiment results or if you get an error message like the one below while attempting log additional runs, your mlflow model experiment needs debugging. Before troubleshooting, it's important to run the "mflow_end_run" command to stop the mlflow process. 
+        
+ ![alt text](ErrorMessage.PNG)
+
+
+        mlflow_end_run()
+
 
 # Registering the Model
 
