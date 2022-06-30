@@ -41,9 +41,8 @@ Run this prior to starting an mlflow run.
 ![alt text](SetExperiment.PNG)
 
 
-## MLFLOW
+## Begin Training¶
 
-Begin Training¶
 
 After setting the experiment, you can begin training. Depending on the type of model you are developing the requirements and architecture for the model will be different. However, there are some key mlflow commands we recommend looking into prior to the beginning of the training.
 
@@ -86,10 +85,14 @@ For any questions about carrier::crate or uncommenting with "!!" please referenc
 https://www.rdocumentation.org/packages/carrier/versions/0.1.0
 
 
-Once the training begins, the user will be able to follow along with the model’s progress by clicking into the Experiment tab this will take the user to another interface where you will be able to view various metrics and the model that gets saved from the run.
+Once the training begins, the user will be able to follow along with the model’s progress by clicking into the Experiment tab. This will take the user to another interface where you will be able to view various metrics and the model that gets saved from the run. Make sure the Machine Learning persona is selected. If the Experiments tab is not available it is likely because the persona is set to Data Science & Engineering or SQL.
 
 
+![alt text](ExperimentTab.PNG)
 
-The screenshot below shows an example where we train a NER model, we have turned on reporting to mlflow. Once the trainer.train() is called the MLFlow run will launch in the previously set experiment context and the user will be able to click into the experiment tab on the right.
+
+# Registering the Model
+
+Once you have determined your "best" model run it is important to register that model. The advantage of registering a model is it creates transparency for determining models in staging and production. Additionally, through registering a model it allows for rapid changes and deploying of updated and refined models without having to alter code written for prediction notebooks. 
 
 
