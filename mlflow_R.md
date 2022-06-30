@@ -124,6 +124,6 @@ Once you have determined your "best" model run it is important to register that 
 ![alt text](RegisterModelRun.PNG)
 
 
-![alt text](ModelRegistered.PNG)
+![alt text](ModeRegistered.PNG)
 
 
