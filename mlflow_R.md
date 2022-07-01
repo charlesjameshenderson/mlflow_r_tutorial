@@ -166,7 +166,7 @@ After that is done use the code below as an example of using the trained model t
 
 ## Predict Troubleshooting
 
-Some models, for instance basic stats::lm() linear models will often run an error with the mflow_predict command. 
+Some models, for instance basic stats::lm() linear models will often run an error with the mlflow_predict command. 
 
         Error in predict(model, .x) : 
           could not find function "predict"
