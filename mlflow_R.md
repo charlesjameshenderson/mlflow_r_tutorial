@@ -165,8 +165,6 @@ After that is done use the code below as an example of using the trained model t
 
 Some models, for instance basic stats::lm() linear models will often run an error with the mflow_predict command. 
 
-![alt text](PredictError.PNG)
-
 In those situations try the mlflow_load_model like a function call.
 
 For example if the crate trained model looks like this:
