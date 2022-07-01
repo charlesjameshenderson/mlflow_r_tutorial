@@ -153,14 +153,6 @@ Open a new notebook and load the same libraries and data as was done in the trai
 
 After that is done use the code below as an example of using the trained model to test on another sample of data.
 
-![alt text](ModelPredict.PNG)
-
-        logged_model <- "models:/R_Tutorial/staging"
-
-
-        best_model <- mlflow_load_model(model_uri = logged_model)
-
-
         logged_model <- "models:/R_Tutorial/staging"
 
 
@@ -168,4 +160,6 @@ After that is done use the code below as an example of using the trained model t
 
 
         ## Generate prediction on 5 rows of data 
-        predictions <- data.frame(mlflow_predict(best_model, data = wine_quality[1:5, !(names(wine_quality) == "quality")]))
+        predictions <- data.frame(mlflow_predict(best_model, data = dataset[1:5, !(names(dataset) == "y")]))
+
+![alt text](ModelPredict.PNG)
