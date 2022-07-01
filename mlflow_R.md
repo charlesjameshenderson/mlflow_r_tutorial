@@ -20,14 +20,11 @@ In a cmd cell:
 
 Enter the following code:
 
-mlflow_create_experiment(name,
-  artifact_location = NULL,
-  client = NULL,
-  tags = NULL
-)
-
-
-In the tab bar:
+        mlflow_create_experiment(name,
+          artifact_location = NULL,
+          client = NULL,
+          tags = NULL
+        )
 
 Create an experiment only once.
 
@@ -166,12 +163,9 @@ After that is done use the code below as an example of using the trained model t
 
 ## Predict Troubleshooting
 
-Some models, for instance basic stats::lm() linear models will often run an error with the mlflow_predict command. 
+Some models, for instance basic stats::lm() linear models will often run an error with the mflow_predict command. 
 
-        Error in predict(model, .x) : 
-          could not find function "predict"
-        Some(<code style = 'font-size:10pt'> Error in predict(model, .x): could not find function &quot;predict&quot; </code>)
-        Error in predict(model, .x): could not find function "predict"
+![alt text](PredictError.PNG)
 
 In those situations try the mlflow_load_model like a function call.
 
