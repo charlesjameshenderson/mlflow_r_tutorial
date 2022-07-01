@@ -122,31 +122,30 @@ Return to the Experiment tab and select the "best fit" model.
 
 ![alt text](SelectRun.PNG)
 
-
 Register the model run.
-
 
 ![alt text](RegisterRun.PNG)
 
 Select the model repository created earlier.
 
-
 ![alt text](RegisterModelRun.PNG)
 
 
-When the model is registered the button will go away and the link to the model in the repository will appear. Select this link.
+When the model is registered the button will disapear and the link to the model in the repository will appear. Select this link.
 
 
 ![alt text](ModeRegistered.PNG)
 
 If this is the first time saving a model to this repository it will be seen as Version 1. Select Version 1.
-With the model ready for the Staging phase of transition select the "Stage:" option and select Transition to Staging. 
+With the model ready for the Staging phase select the "Stage:" option and select Transition to Staging. 
 
 ![alt text](ModelStage.PNG)
 
 Leaving a comment may be important for logging the model purpose or changes associated with the model version. It can also be used for notes to the approver as to why the model needs to be transitioned. 
 
 ![alt text](Transition.PNG)
+
+## Model Prediction
 
 With model fully registered it can be utilized for predictions.
 
