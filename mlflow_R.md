@@ -41,7 +41,7 @@ Run this prior to starting an mlflow run.
 ![alt text](SetExperiment.PNG)
 
 
-## Begin Training¶
+## Begin Training
 
 
 After setting the experiment, you can begin training. Depending on the type of model you are developing the requirements and architecture for the model will be different. However, there are some key mlflow commands we recommend looking into prior to the beginning of the training.
