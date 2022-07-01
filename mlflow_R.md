@@ -166,7 +166,14 @@ After that is done use the code below as an example of using the trained model t
 
 ## Predict Troubleshooting
 
-Some models, for instance basic stats::lm() linear models will often run an error with the mflow_predict command. In those situations try the mlflow_load_model like a function call.
+Some models, for instance basic stats::lm() linear models will often run an error with the mflow_predict command. 
+
+        Error in predict(model, .x) : 
+          could not find function "predict"
+        Some(<code style = 'font-size:10pt'> Error in predict(model, .x): could not find function &quot;predict&quot; </code>)
+        Error in predict(model, .x): could not find function "predict"
+
+In those situations try the mlflow_load_model as a function call.
 
 For example if the crate trained model looks like this:
 
