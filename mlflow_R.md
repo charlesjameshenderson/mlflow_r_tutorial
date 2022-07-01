@@ -166,15 +166,15 @@ After that is done use the code below as an example of using the trained model t
 
 ## Predict Troubleshooting
 
-Some models, for instance basic stats::lm() linear models will often run an error with the mflow_predict command. In those instances using the mlflow_load_model like a function call my work.
+Some models, for instance basic stats::lm() linear models will often run an error with the mflow_predict command. In those situations try the mlflow_load_model like a function call.
 
 For example if the crate trained model looks like this:
 
         prediction <- carrier::crate(~ stats::predict.lm(!!trained_model, .x), !!trained_model)
         mlflow_log_model(prediction, artifact_path="Linear Model")  
 
-The prediction may need to be folled like this:
+The prediction may need to be ran like this:
 
         best_model <- mlflow_load_model("models:/R_Tutorial/staging")
         output <- as.data.frame(best_model(.x = dataset))
-        base::names(output)[1] <- "predictions
+        base::names(output)[1] <- "predictions"
