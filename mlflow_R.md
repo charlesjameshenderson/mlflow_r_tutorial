@@ -104,32 +104,69 @@ If no metrics are appearing in your experiment results or if you get an error me
 
 # Registering the Model
 
-Once you have determined your "best" model run it is important to register that model. The advantage of registering a model is it creates transparency for determining models in staging and production. Additionally, through registering a model it allows for rapid changes and deploying of updated and refined models without having to alter code written for prediction notebooks. 
+Once you have determined your "best" model run it is important to register that model. The advantage of registering a model is it creates transparency for determining models in staging and production. Additionally, through registering a model it allows for rapid deployments of newly refined models without changing the prediction code.
+
+Start by creating a model landing zone by selecting the Models tab.
 
 ![alt text](CreateModel.PNG)
 
+Select Create Model and give it a reference name. 
 
 ![alt text](NameModelRepo.PNG)
 
+This is the repository the model will be registered in.
 
 ![alt text](ModelLanding.PNG)
 
+Return to the Experiment tab and select the "best fit" model.
 
 ![alt text](SelectRun.PNG)
 
 
+Register the model run.
+
+
 ![alt text](RegisterRun.PNG)
+
+Select the model repository created earlier.
 
 
 ![alt text](RegisterModelRun.PNG)
 
 
+When the model is registered the button will go away and the link to the model in the repository will appear. Select this link.
+
+
 ![alt text](ModeRegistered.PNG)
 
+If this is the first time saving a model to this repository it will be seen as Version 1. Select Version 1.
+With the model ready for the Staging phase of transition select the "Stage:" option and select Transition to Staging. 
 
 ![alt text](ModelStage.PNG)
 
+Leaving a comment may be important for logging the model purpose or changes associated with the model version. It can also be used for notes to the approver as to why the model needs to be transitioned. 
 
 ![alt text](Transition.PNG)
 
+With model fully registered it can be utilized for predictions.
 
+Open a new notebook and load the same libraries and data as was done in the training notebook.
+
+After that is done use the code below as an example of using the trained model to test on another sample of data.
+
+![alt text](ModelPredict.PNG)
+
+        logged_model <- "models:/R_Tutorial/staging"
+
+
+        best_model <- mlflow_load_model(model_uri = logged_model)
+
+
+        logged_model <- "models:/R_Tutorial/staging"
+
+
+        best_model <- mlflow_load_model(model_uri = logged_model)
+
+
+        ## Generate prediction on 5 rows of data 
+        predictions <- data.frame(mlflow_predict(best_model, data = wine_quality[1:5, !(names(wine_quality) == "quality")]))
